@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      -  '8080:8080'
+    volumes:
+      - ./data:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: db
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_USER: app
+
+
+
+
+
+
