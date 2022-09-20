@@ -4,14 +4,13 @@ services:
   postgres:
     image: postgres:latest
     ports:
-      -  '8080:8080'
+      -  '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql
     environment:
-      POSTGRES_PASSWORD: example
       POSTGRES_DB: db
-      PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_USER: app
+      POSTGRES_PASSWORD: 12345D
 
 
 
